@@ -15,6 +15,6 @@ set logOfLastFetch to anytime in the past
 
 git clone https://github.com/chaselikethebank/yt-cron-rock-webhook
 
-add your api key and the playlist id you are interested in
+add your api key and the playlist id you are interested in logging into the .env file and delete "EXAMPLE" from the end of the file name
 npm i
 npm run start
