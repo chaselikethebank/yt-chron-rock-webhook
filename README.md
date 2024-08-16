@@ -12,3 +12,8 @@ YouTube API: Use the publishedAfter parameter in the YouTube API to fetch videos
 B. Using Cron Scheduling
 Track Last Run Time: Instead of storing the timestamp, you could use the cron job's schedule to infer the last run time.
 Fetch Data Since Last Run: Calculate the difference between the current time and the last scheduled run time and fetch data uploaded during this interval.
+
+
+git clone https://github.com/chaselikethebank/yt-cron-rock-webhook
+npm i
+npm run start
