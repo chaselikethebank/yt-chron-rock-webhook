@@ -1,60 +1,46 @@
 require('dotenv').config();
 const fs = require('fs');
 const path = require('path');
-const { google } = require('googleapis');
-const { timestampFile } = require('./filePaths');
 const youtube = require('./youtubeClient');
+const playlistConfig = require('./playlistConfig');
+
+// Create 'data' directory if it doesn't exist
+const dataDir = path.join(__dirname, 'data');
+if (!fs.existsSync(dataDir)) {
+  fs.mkdirSync(dataDir);
+}
 
 async function fetchYouTubeData() {
-  let lastFetchTime = new Date(0);
-
-  if (fs.existsSync(timestampFile)) {
-    try {
-      const data = fs.readFileSync(timestampFile, 'utf8');
-      const json = JSON.parse(data);
-      lastFetchTime = new Date(json.lastFetchTime);
-    } catch (error) {
-      console.error('Error reading or parsing the timestamp file:', error);
-    }
-  }
-
-  const currentTime = new Date();
-  let dataFetched = false;
+  const playlistIds = Object.values(playlistConfig);
   let allVideos = [];
-  let nextPageToken = null;
 
-  try {
+  // Fetch videos from all playlists
+  for (const playlistId of playlistIds) {
+    let nextPageToken = null;
+
     do {
       const response = await youtube.playlistItems.list({
         part: 'snippet',
-        playlistId: process.env.HARVEST_PLAYLIST_ID,
+        playlistId: playlistId,
         maxResults: 50,
-        publishedAfter: lastFetchTime.toISOString(),
-        pageToken: nextPageToken
+        pageToken: nextPageToken,
       });
 
       const videos = response.data.items;
       allVideos = allVideos.concat(videos);
 
-      if (videos.length > 0) {
-        console.log('Fetched videos:', videos);
-        dataFetched = true;
-      } else {
-        console.log('No new videos found.');
-      }
-
       nextPageToken = response.data.nextPageToken;
     } while (nextPageToken);
-
-    if (dataFetched) {
-      fs.writeFileSync(timestampFile, JSON.stringify({ lastFetchTime: currentTime }));
-      console.log('Timestamp updated.');
-    }
-  } catch (error) {
-    console.error('Error fetching YouTube data:', error);
   }
 
-  return allVideos;
+  // Get current date and time for the filename
+  const currentDate = new Date().toISOString().split('T')[0];
+  const filename = `youtubeCache_${currentDate}.json`;
+  const filePath = path.join(dataDir, filename);
+
+  // Write data to a new file in the 'data' folder
+  fs.writeFileSync(filePath, JSON.stringify(allVideos, null, 2));
+  console.log(`Data successfully saved to ${filePath}`);
 }
 
 module.exports = fetchYouTubeData;

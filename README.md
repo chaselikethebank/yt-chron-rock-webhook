@@ -13,6 +13,9 @@ set cron term to 10 seconds
 set logOfLastFetch to anytime in the past
 "1970-01-01T00:00:00.000Z"
 
+for testing purposes, I am also pushing all the data to a new file named {dateTime} to kind of eye ball, what playlists ids are logging and how many are there ect 
+/Users/cdemaster/cd.t/yt-cron-rock-webhook/data/youtubeCache_2024-08-16.json
+
 spinning up:
 
 git clone https://github.com/chaselikethebank/yt-cron-rock-webhook
