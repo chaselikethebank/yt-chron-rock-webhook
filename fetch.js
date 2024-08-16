@@ -1,11 +1,11 @@
-require('dotenv').config();
-const fs = require('fs');
-const path = require('path');
-const youtube = require('./youtubeClient');
-const playlistConfig = require('./playlistConfig');
+require("dotenv").config();
+const fs = require("fs");
+const path = require("path");
+const youtube = require("./youtubeClient");
+const playlistConfig = require("./playlistConfig");
 
 // Create 'data' directory if it doesn't exist
-const dataDir = path.join(__dirname, 'data');
+const dataDir = path.join(__dirname, "data");
 if (!fs.existsSync(dataDir)) {
   fs.mkdirSync(dataDir);
 }
@@ -20,7 +20,7 @@ async function fetchYouTubeData() {
 
     do {
       const response = await youtube.playlistItems.list({
-        part: 'snippet',
+        part: "snippet",
         playlistId: playlistId,
         maxResults: 50,
         pageToken: nextPageToken,
@@ -34,8 +34,11 @@ async function fetchYouTubeData() {
   }
 
   // Get current date and time for the filename
-  const currentDate = new Date().toISOString().split('T')[0];
-  const filename = `youtubeCache_${currentDate}.json`;
+  const now = new Date();
+  const currentDateTime = now.toISOString().replace(/[:.]/g, "-");
+  const filename = `youtubeCache_${currentDateTime}.json`;
+  
+  // Define the file path
   const filePath = path.join(dataDir, filename);
 
   // Write data to a new file in the 'data' folder
