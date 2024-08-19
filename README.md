@@ -43,7 +43,7 @@ for testing purposes, I have set the cron term to cycle every 10 seconds
 for testing set system_logs/logOfLastFetch.json to anytime in the past for new content to pass the filter and log data
 this is a good date to use: "2004-08-19T19:22:31.602Z"
 
-### 4 spinning up:
+### 4 Spinning up:
 
 bash
 npm i
@@ -53,6 +53,6 @@ bash
 npm run start
 
 
-### 5 did I win?! 
+### 5 Did I win?! 
 
 check the console, the log of last fetch and the data directory => rock rms 
