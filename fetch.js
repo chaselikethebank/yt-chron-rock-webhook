@@ -1,20 +1,29 @@
 require("dotenv").config();
 const fs = require("fs");
 const path = require("path");
+const axios = require("axios");
 const youtube = require("./youtubeClient");
 const playlistConfig = require("./playlistConfig");
+const { createDataDirectory } = require("./utils/createDataDirectory.js");
+const { readLastFetchTime } = require("./utils/readLastFetchTime.js");
+const { saveDataToFile } = require("./utils/saveDataToFile.js");
+const { logLastFetchTime } = require("./utils/logLastFetchTime.js");
 
-// Create 'data' directory if it doesn't exist
+const logFilePath = path.join(__dirname, "system_logs", "logOfLastFetch.json");
 const dataDir = path.join(__dirname, "data");
-if (!fs.existsSync(dataDir)) {
-  fs.mkdirSync(dataDir);
-}
+
+const rockRmsWebhookUrl = process.env.ROCK_RMS_WEBHOOK_URL;
 
 async function fetchYouTubeData() {
+  createDataDirectory();
+
+  const lastFetchTime = readLastFetchTime();
+  console.log("Date of last fetch from inside fetchYouTubeData():", lastFetchTime);
+
   const playlistIds = Object.values(playlistConfig);
+  console.log(playlistIds);
   let allVideos = [];
 
-  // Fetch videos from all playlists
   for (const playlistId of playlistIds) {
     let nextPageToken = null;
 
@@ -26,24 +35,46 @@ async function fetchYouTubeData() {
         pageToken: nextPageToken,
       });
 
-      const videos = response.data.items;
+      const videos = response.data.items.filter(video => {
+        const publishedAt = new Date(video.snippet.publishedAt);
+        console.log(lastFetchTime, ">", publishedAt);
+        return !lastFetchTime || publishedAt > lastFetchTime;
+      });
+
       allVideos = allVideos.concat(videos);
+      console.log(allVideos);
 
       nextPageToken = response.data.nextPageToken;
     } while (nextPageToken);
   }
 
-  // Get current date and time for the filename
-  const now = new Date();
-  const currentDateTime = now.toISOString().replace(/[:.]/g, "-");
-  const filename = `youtubeCache_${currentDateTime}.json`;
-  
-  // Define the file path
-  const filePath = path.join(dataDir, filename);
+  if (allVideos.length > 0) {
+    const now = new Date();
+    const currentDateTime = now.toISOString().replace(/[:.]/g, "-");
+    const filename = `youtubeCache_${currentDateTime}.json`;
 
-  // Write data to a new file in the 'data' folder
-  fs.writeFileSync(filePath, JSON.stringify(allVideos, null, 2));
-  console.log(`Data successfully saved to ${filePath}`);
+    try {
+      await axios.post(rockRmsWebhookUrl, allVideos);
+      console.log('New YouTube data successfully sent to Rock RMS');
+    } catch (error) {
+      console.error('Error sending data to Rock RMS:', error);
+    }
+
+    try {
+      saveDataToFile(dataDir, filename, allVideos, allVideos.length);
+    } catch (error) {
+      console.error('Error saving data to file:', error);
+    }
+
+    try {
+      logLastFetchTime(logFilePath, now.toISOString());
+    } catch (error) {
+      console.error(error, "unable to log last fetch time");
+    }
+  } else {
+    console.log("No new videos found since the last fetch.");
+  }
 }
 
 module.exports = fetchYouTubeData;
+
