@@ -35,7 +35,7 @@ YOUTUBE_API_KEY=
 ROCK_RMS_WEBHOOK_URL=https://www.something.org/youtube-cache
 
 
-### 3 test
+### 3 Testing
 
 for testing purposes, I have set the cron term to cycle every 10 seconds
 '*/10 * * * * *'
