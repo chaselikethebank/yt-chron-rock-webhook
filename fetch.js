@@ -18,7 +18,10 @@ async function fetchYouTubeData() {
   createDataDirectory();
 
   const lastFetchTime = readLastFetchTime();
-  console.log("Date of last fetch from inside fetchYouTubeData():", lastFetchTime);
+  console.log(
+    "Date of last fetch from inside fetchYouTubeData():",
+    lastFetchTime
+  );
 
   const playlistIds = Object.values(playlistConfig);
   console.log(playlistIds);
@@ -35,14 +38,14 @@ async function fetchYouTubeData() {
         pageToken: nextPageToken,
       });
 
-      const videos = response.data.items.filter(video => {
+      const videos = response.data.items.filter((video) => {
         const publishedAt = new Date(video.snippet.publishedAt);
         console.log(lastFetchTime, ">", publishedAt);
         return !lastFetchTime || publishedAt > lastFetchTime;
       });
 
       allVideos = allVideos.concat(videos);
-      console.log(allVideos);
+      // console.log(allVideos);
 
       nextPageToken = response.data.nextPageToken;
     } while (nextPageToken);
@@ -54,16 +57,25 @@ async function fetchYouTubeData() {
     const filename = `youtubeCache_${currentDateTime}.json`;
 
     try {
-      await axios.post(rockRmsWebhookUrl, allVideos);
-      console.log('New YouTube data successfully sent to Rock RMS');
+      // Iterate over each video and send individually to Rock RMS
+      for (const video of allVideos) {
+        try {
+          const response = await axios.post(rockRmsWebhookUrl, video);
+          console.log(
+            `Video \x1b[33m${video.id}\x1b[0m successfully sent to Rock RMS.`
+          );
+        } catch (error) {
+          console.error(`Error sending video ${video.id} to Rock RMS:`, error);
+        }
+      }
     } catch (error) {
-      console.error('Error sending data to Rock RMS:', error);
+      console.error("Error sending data to Rock RMS:", error);
     }
 
     try {
       saveDataToFile(dataDir, filename, allVideos, allVideos.length);
     } catch (error) {
-      console.error('Error saving data to file:', error);
+      console.error("Error saving data to file:", error);
     }
 
     try {
@@ -77,4 +89,3 @@ async function fetchYouTubeData() {
 }
 
 module.exports = fetchYouTubeData;
-
