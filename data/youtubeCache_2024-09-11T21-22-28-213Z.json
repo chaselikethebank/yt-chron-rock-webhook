@@ -1,0 +1,45 @@
+[
+  {
+    "kind": "youtube#playlistItem",
+    "etag": "JDrQQHRGl1nfxCZW3IQYZVIRUbk",
+    "id": "UExNUnp2MmpPeGhmUUxyc3JGZnJ4WVdKM2NuRU5nNjdHNi44Rjc3MDE3QTkyQ0YyOEIx",
+    "snippet": {
+      "publishedAt": "2024-09-11T21:22:16Z",
+      "channelId": "UCP7ezytRb2i4njgDxhwHFTg",
+      "title": "Minute Message | September 12, 2024",
+      "description": "",
+      "thumbnails": {
+        "default": {
+          "url": "https://i.ytimg.com/vi/ewDGw2WEELA/default.jpg",
+          "width": 120,
+          "height": 90
+        },
+        "medium": {
+          "url": "https://i.ytimg.com/vi/ewDGw2WEELA/mqdefault.jpg",
+          "width": 320,
+          "height": 180
+        },
+        "high": {
+          "url": "https://i.ytimg.com/vi/ewDGw2WEELA/hqdefault.jpg",
+          "width": 480,
+          "height": 360
+        },
+        "standard": {
+          "url": "https://i.ytimg.com/vi/ewDGw2WEELA/sddefault.jpg",
+          "width": 640,
+          "height": 480
+        }
+      },
+      "channelTitle": "The Church at Woodforest",
+      "playlistId": "PLMRzv2jOxhfQLrsrFfrxYWJ3cnENg67G6",
+      "position": 372,
+      "resourceId": {
+        "kind": "youtube#video",
+        "videoId": "ewDGw2WEELA"
+      },
+      "videoOwnerChannelTitle": "The Church at Woodforest",
+      "videoOwnerChannelId": "UCP7ezytRb2i4njgDxhwHFTg"
+    },
+    "playlistName": "Mid-Week Message"
+  }
+]
