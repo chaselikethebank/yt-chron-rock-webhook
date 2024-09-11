@@ -23,49 +23,69 @@ async function fetchYouTubeData() {
     lastFetchTime
   );
 
-  const playlistIds = Object.values(playlistConfig);
-  console.log(playlistIds);
+  const playlistEntries = Object.entries(playlistConfig);
+
   let allVideos = [];
 
-  for (const playlistId of playlistIds) {
+  for (const [playlistName, playlistId] of playlistEntries) {
     let nextPageToken = null;
-
+    console.log(playlistEntries.playlistName, playlistEntries.playlistId,)
     do {
-      const response = await youtube.playlistItems.list({
-        part: "snippet",
-        playlistId: playlistId,
-        maxResults: 50,
-        pageToken: nextPageToken,
-      });
+      try {
+        const response = await youtube.playlistItems.list({
+          part: "snippet",
+          playlistId: playlistId, 
+          maxResults: 50,
+          pageToken: nextPageToken,
+        });
 
-      const videos = response.data.items.filter((video) => {
-        const publishedAt = new Date(video.snippet.publishedAt);
-        console.log(lastFetchTime, ">", publishedAt);
-        return !lastFetchTime || publishedAt > lastFetchTime;
-      });
+        const videos = response.data.items.filter((video) => {
+          const publishedAt = new Date(video.snippet.publishedAt);
+          // console.log(lastFetchTime, ">", publishedAt);
+          return !lastFetchTime || publishedAt > lastFetchTime;
+        });
 
-      allVideos = allVideos.concat(videos);
-      // console.log(allVideos);
-
-      nextPageToken = response.data.nextPageToken;
+        allVideos = allVideos.concat(
+          videos.map((video) => ({
+            ...video,
+            playlistName, 
+          }))
+         
+        );
+        
+        nextPageToken = response.data.nextPageToken;
+      } catch (error) {
+        console.error(
+          `Error fetching videos for playlist "${playlistName}":`,
+          error
+        );
+      }
     } while (nextPageToken);
+    console.log(allVideos)
   }
 
   if (allVideos.length > 0) {
+    console.log(allVideos)
     const now = new Date();
     const currentDateTime = now.toISOString().replace(/[:.]/g, "-");
     const filename = `youtubeCache_${currentDateTime}.json`;
 
     try {
-      // Iterate over each video and send individually to Rock RMS
       for (const video of allVideos) {
         try {
-          const response = await axios.post(rockRmsWebhookUrl, video);
-          console.log(
-            `Video \x1b[33m${video.id}\x1b[0m successfully sent to Rock RMS.`
-          );
+          const videoData = {
+            video: video.snippet,
+            playlistName: video.playlistName,
+              
+          };
+
+          const response = await axios.post(rockRmsWebhookUrl, videoData);
+          console.log(videoData);
         } catch (error) {
-          console.error(`Error sending video ${video.id} to Rock RMS:`, error);
+          console.error(
+            `Error sending video ${video.snippet.resourceId.videoId} from playlist "${video.playlistName}" to Rock RMS:`,
+            error
+          );
         }
       }
     } catch (error) {
@@ -74,6 +94,7 @@ async function fetchYouTubeData() {
 
     try {
       saveDataToFile(dataDir, filename, allVideos, allVideos.length);
+      console.log('save data to file step')
     } catch (error) {
       console.error("Error saving data to file:", error);
     }
@@ -81,7 +102,7 @@ async function fetchYouTubeData() {
     try {
       logLastFetchTime(logFilePath, now.toISOString());
     } catch (error) {
-      console.error(error, "unable to log last fetch time");
+      console.error("Error logging last fetch time:", error);
     }
   } else {
     console.log("No new videos found since the last fetch.");
