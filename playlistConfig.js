@@ -101,7 +101,7 @@ module.exports = {
   "Ordinary Time": "PLMRzv2jOxhfSk7M3O4pRV0NI9npbOtHRR",
   "Come Together": "PLMRzv2jOxhfRSLPgd85x18LJPg7W2-jSl",
   "Our Lord's Prayer": "PLMRzv2jOxhfQIiLTC-4rzkseWVmWIZ1tU",
-  "Bishop Hayes": "PLMRzv2jOxhfQ0OBQ1UK2fIX5eRm8Vx4j5",
+  "Bishop Hayes": "ç",
   "Mark Sorensen": "PLMRzv2jOxhfTYUk8Vo5C8Oc9rgR3Nas5x",
   "Woodlands Music | Woodforest": "PLMRzv2jOxhfQ6t0s-9RQk1ZK0MTAFtvcl",
   "Latest Sermons": "PLMRzv2jOxhfQP-1MmbuvtLYdGbH4JrW_J",
