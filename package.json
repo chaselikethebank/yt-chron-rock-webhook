@@ -16,6 +16,6 @@
     "express": "^4.19.2",
     "gitignore": "^0.7.0",
     "googleapis": "^142.0.0",
-    "node-cron": "^3.0.3",
+    "node-cron": "^3.0.3"
   }
 }
