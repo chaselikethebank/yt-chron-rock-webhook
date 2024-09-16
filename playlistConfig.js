@@ -101,7 +101,7 @@ module.exports = {
   "Ordinary Time": "PLMRzv2jOxhfSk7M3O4pRV0NI9npbOtHRR",
   "Come Together": "PLMRzv2jOxhfRSLPgd85x18LJPg7W2-jSl",
   "Our Lord's Prayer": "PLMRzv2jOxhfQIiLTC-4rzkseWVmWIZ1tU",
-  "Bishop Hayes": "ç",
+  "Bishop Hayes": "PLgE8B1SdCTDta5eT9TYbsQcZlM7PWlc73",
   "Mark Sorensen": "PLMRzv2jOxhfTYUk8Vo5C8Oc9rgR3Nas5x",
   "Woodlands Music | Woodforest": "PLMRzv2jOxhfQ6t0s-9RQk1ZK0MTAFtvcl",
   "Latest Sermons": "PLMRzv2jOxhfQP-1MmbuvtLYdGbH4JrW_J",
@@ -115,3 +115,5 @@ module.exports = {
   "Behind the Scenes": "PLMRzv2jOxhfSdcwoX7taCULrmyEVJvEQv",
   "Mid-Week Message": "PLMRzv2jOxhfQLrsrFfrxYWJ3cnENg67G6"
 };
+
+// PLgE8B1SdCTDta5eT9TYbsQcZlM7PWlc73 hayes playlist id 
