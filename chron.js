@@ -6,3 +6,7 @@ cron.schedule('*/10 * * * * *', () => {
   console.log('Running YouTube data fetch job...');
   fetchYouTubeData();
 });
+
+
+//  to run the job every Tuesday and Friday at 1:00 pm cst 
+// 0 13 * * 2,5

@@ -8,12 +8,14 @@ function getDirectorySize(directoryPath) {
         function calculateSize(currentPath) {
             fs.readdir(currentPath, (err, files) => {
                 if (err) {
+                    console.log(err);
                     return reject(err);
                 }
 
                 let pending = files.length;
 
                 if (!pending) {
+                    console.log('Total size:', totalSize);
                     return resolve(totalSize);
                 }
 
@@ -21,6 +23,7 @@ function getDirectorySize(directoryPath) {
                     const filePath = path.join(currentPath, file);
                     fs.stat(filePath, (err, stats) => {
                         if (err) {
+                            console.log(err);
                             return reject(err);
                         }
 
@@ -28,7 +31,10 @@ function getDirectorySize(directoryPath) {
                             calculateSize(filePath);
                         } else {
                             totalSize += stats.size;
+                            console.log(`Added size of ${file}: ${stats.size} bytes`);
+
                             if (!--pending) {
+                                console.log('Final total size:', totalSize);
                                 resolve(totalSize);
                             }
                         }
@@ -40,5 +46,11 @@ function getDirectorySize(directoryPath) {
         calculateSize(directoryPath);
     });
 }
+
+// Call the function with a test directory
+const testDirectory = path.join(__dirname, '..'); // Adjust the path to a valid directory
+getDirectorySize(testDirectory)
+    .then(size => console.log(`Directory size: ${size} bytes`))
+    .catch(err => console.error('Error calculating directory size:', err));
 
 module.exports = { getDirectorySize };
