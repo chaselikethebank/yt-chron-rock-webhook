@@ -56,3 +56,30 @@ npm run start
 ### 5 Did I win?! 
 
 check the console, the log of last fetch and the data directory => rock rms 
+
+
+### Prudiction  comands
+
+I have pm2 running the production server 
+
+to set the list
+```
+sudo env PATH=$PATH:/usr/bin /usr/local/lib/node_modules/pm2/bin/pm2 startup systemd -u thewoodlandsumc --hp /home/thewoodlandsumc
+```
+to save the list setting
+```
+pm2 save
+```
+to launch the production server w restarts on failing
+```
+pm2 startup
+```
+restart all
+```
+pm2 restart all
+
+```
+double check it is running 
+```
+pm2 status (should print you a table w green "status: online")
+```

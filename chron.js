@@ -2,7 +2,7 @@ const cron = require('node-cron');
 const fetchYouTubeData = require('./fetch-refactor');  
 
 // Schedule the cron job to run weekly
-cron.schedule('30 13 * * 1', () => {
+cron.schedule('0 13 * * 2,5', () => {
   console.log('Running YouTube data fetch job...');
   fetchYouTubeData();
 
