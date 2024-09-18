@@ -62,7 +62,7 @@ async function fetchYouTubeData() {
         nextPageToken = response.data.nextPageToken;
       } catch (error) {
         console.error(
-          `Error fetching videos for playlist "${playlistName}":`,
+          `${YELLOW} Error fetching videos for playlist ${RED}"${playlistName}" ${RESET}:`,
           error
         );
       }
