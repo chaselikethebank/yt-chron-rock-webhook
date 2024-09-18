@@ -4,8 +4,6 @@ const fs = require('fs');
 const path = require('path');
 const youtube = require('../youtubeClient'); 
 
-
-
 // Path to the configuration files
 const playlistConfigPath = path.join(__dirname, '../playlistConfig.js');
 const channelConfigPath = path.join(__dirname, '../channelConfig.js');
