@@ -113,7 +113,7 @@ module.exports = {
   "Dr. Ed Robb": "PLMRzv2jOxhfSHLACRM1aRJpTZDLMh_2eN",
   "Entrusted: 40th Anniversary": "PLMRzv2jOxhfTJwclMOECA6SA-3nXvMNi_",
   "Behind the Scenes": "PLMRzv2jOxhfSdcwoX7taCULrmyEVJvEQv",
-  "Mid-Week Message": "PLMRzv2jOxhfQLrsrFfrxYWJ3cnENg67G6"
+  "Mid-Week Message": "PLMRzv2jOxhfQLrsrFfrxYWJ3cnENg67G6",
+  "The Mind of Christ": "PLgE8B1SdCTDsnNB7VG97Gm65blFZIoh3M",
+  "Our Exodus": "PLMRzv2jOxhfQ9v2KA7VmpMw8m5u8C1LUe"
 };
-
-// PLgE8B1SdCTDta5eT9TYbsQcZlM7PWlc73 hayes playlist id 

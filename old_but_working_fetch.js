@@ -2,8 +2,8 @@ require("dotenv").config();
 const fs = require("fs");
 const path = require("path");
 const axios = require("axios");
-const youtube = require("./youtubeClient");
-const playlistConfig = require("./playlistConfig");
+const youtube = require("./youtubeClient.js");
+const playlistConfig = require("./playlistConfig.js");
 const { createDataDirectory } = require("./utils/createDataDirectory.js");
 const { readLastFetchTime } = require("./utils/readLastFetchTime.js");
 const { saveDataToFile } = require("./utils/saveDataToFile.js");
@@ -12,7 +12,7 @@ const { logLastFetchTime } = require("./utils/logLastFetchTime.js");
 const logFilePath = path.join(__dirname, "system_logs", "logOfLastFetch.json");
 const dataDir = path.join(__dirname, "data");
 
-const rockRmsWebhookUrl = process.env.ROCK_RMS_WEBHOOK_URL;
+const rockRmsWebhookContentChannelUrl = process.env.ROCK_RMS_WEBHOOK_CONTENT_CHANNEL_URL;
 
 async function fetchYouTubeData() {
   createDataDirectory();
@@ -79,7 +79,8 @@ async function fetchYouTubeData() {
               
           };
 
-          const response = await axios.post(rockRmsWebhookUrl, videoData);
+          const response = await axios.post(rockRmsWebhookContentChannelUrl, videoData);
+          
           console.log(videoData);
         } catch (error) {
           console.error(
