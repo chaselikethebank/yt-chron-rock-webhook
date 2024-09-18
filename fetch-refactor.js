@@ -25,7 +25,7 @@ async function fetchYouTubeData() {
 
   const lastFetchTime = readLastFetchTime();
   console.log(
-    `${CYAN} Date of last fetch from inside fetchYouTubeData()${RESET}:${RED},
+    `${CYAN}Date of last fetch from inside fetchYouTubeData()${RESET}:${RED}
     ${lastFetchTime}${RESET}`
   );
 
