@@ -11,8 +11,6 @@ function createDataDirectory() {
   }
 }
 
-
-
 module.exports = {
   createDataDirectory,
 

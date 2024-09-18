@@ -3,7 +3,8 @@ const fetchAndUpdatePlaylistNames = require('./utils/writePlaylistConfig.js');
 const fetchYouTubeData = require('./fetch-refactor');  
 
 // Schedule the cron job to run at 2:30 PM from Monday to Friday
-cron.schedule('40 14 * * 1,2,3,4,5', async () => {
+//  30 14 * * 1,2,3,4,5
+cron.schedule('*/20 * * * * *', async () => {
   console.log('Running YouTube data fetch job at 2:30 PM...');
   
   try {

@@ -8,19 +8,25 @@ const { createDataDirectory } = require("./utils/createDataDirectory.js");
 const { readLastFetchTime } = require("./utils/readLastFetchTime.js");
 const { saveDataToFile } = require("./utils/saveDataToFile.js");
 const { logLastFetchTime } = require("./utils/logLastFetchTime.js");
+const BLUE = '\x1b[34m';
+const RESET = '\x1b[0m';
+const YELLOW = '\x1b[33m';
+const CYAN = `\x1b[95m`;
+const RED = `\x1b[31m`;
+
 
 const logFilePath = path.join(__dirname, "system_logs", "logOfLastFetch.json");
 const dataDir = path.join(__dirname, "data");
 
-const rockRmsWebhookUrl = process.env.ROCK_RMS_WEBHOOK_URL;
+const rockRmsWebhookContentChannelUrl = process.env.ROCK_RMS_WEBHOOK_CONTENT_CHANNEL_URL;
 
 async function fetchYouTubeData() {
   createDataDirectory();
 
   const lastFetchTime = readLastFetchTime();
   console.log(
-    "Date of last fetch from inside fetchYouTubeData():",
-    lastFetchTime
+    `${CYAN} Date of last fetch from inside fetchYouTubeData()${RESET}:${RED},
+    ${lastFetchTime}${RESET}`
   );
 
   const playlistEntries = Object.entries(playlistConfig);
@@ -29,7 +35,7 @@ async function fetchYouTubeData() {
 
   for (const [playlistName, playlistId] of playlistEntries) {
     let nextPageToken = null;
-    console.log(playlistEntries.playlistName, playlistEntries.playlistId,)
+    // console.log(playlistEntries.playlistName, playlistEntries.playlistId,)
     do {
       try {
         const response = await youtube.playlistItems.list({
@@ -61,11 +67,11 @@ async function fetchYouTubeData() {
         );
       }
     } while (nextPageToken);
-    console.log(allVideos)
+    // console.log(allVideos)
   }
 
   if (allVideos.length > 0) {
-    console.log(allVideos)
+    // console.log("allVideos" + allVideos)
     const now = new Date();
     const currentDateTime = now.toISOString().replace(/[:.]/g, "-");
     const filename = `youtubeCache_${currentDateTime}.json`;
@@ -79,8 +85,8 @@ async function fetchYouTubeData() {
               
           };
 
-          const response = await axios.post(rockRmsWebhookUrl, videoData);
-          console.log(videoData);
+          const response = await axios.post(rockRmsWebhookContentChannelUrl, videoData);
+          console.log(`${RESET}New Video Title:${BLUE} ${JSON.stringify(videoData.video.title, null, 2)}${RESET}`);
         } catch (error) {
           console.error(
             `Error sending video ${video.snippet.resourceId.videoId} from playlist "${video.playlistName}" to Rock RMS:`,
@@ -94,7 +100,7 @@ async function fetchYouTubeData() {
 
     try {
       saveDataToFile(dataDir, filename, allVideos, allVideos.length);
-      console.log('save data to file step')
+      console.log('on the save data to file step')
     } catch (error) {
       console.error("Error saving data to file:", error);
     }
@@ -105,7 +111,7 @@ async function fetchYouTubeData() {
       console.error("Error logging last fetch time:", error);
     }
   } else {
-    console.log("No new videos found since the last fetch.");
+    console.log(` ${YELLOW} No new videos found since the last fetch. ${RESET}`);
   }
 }
 

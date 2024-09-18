@@ -4,6 +4,7 @@ const path = require('path');
 const express = require('express');
 const app = express();
 const { timestampFile } = require('./filePaths');
+const RESET = '\x1b[0m';
 
 require('./chron');
 
