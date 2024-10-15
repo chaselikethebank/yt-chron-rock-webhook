@@ -4,8 +4,9 @@ const { YOUTUBE_API_KEY } = require('../');
 const fs = require('fs');
 const path = require('path');
 const youtube = require('../youtubeClient'); 
-const { addPlaylistsToRock } = require('./addPlaylistToRock');
+const { addPlaylistToRock } = require('../utils/addPlaylistToRock'); 
 const GREEN = '\x1b[32m'; 
+ 
 const BLUE = '\x1b[34m';
 const RESET = '\x1b[0m';
 const RED = '\x1b[31m';
@@ -20,9 +21,8 @@ const channelConfig = require(channelConfigPath);
 
 async function fetchAndUpdatePlaylistNames() {
 
-
   try {
-    console.log(typeof addPlaylistsToRock);
+    console.log(typeof addPlaylistToRock, "writePlaylistConfig.js");
     for (const [key, channel] of Object.entries(channelConfig)) {
       console.log(`${GREEN}Fetching playlists for channel${RESET}:${BLUE} ${channel.name} (${channel.id}) ${RESET}`);
       
@@ -51,7 +51,7 @@ async function fetchAndUpdatePlaylistNames() {
         if (newPlaylists.length > 0) {
           // Send playlists to Rock RMS
           try {
-            await addPlaylistsToRock(newPlaylists);  // Passing an array of objects
+            await addPlaylistToRock(newPlaylists);  // Passing an array of objects
             console.log('[writePlaylistConfig] Successfully send and returned from added playlists to Rock util.');
             
             // Write updated playlist config to file
@@ -62,7 +62,8 @@ async function fetchAndUpdatePlaylistNames() {
               console.error(`Error writing playlistConfig file:`, error.message);
             }
           } catch (error) {
-            console.error(`Error sending playlists to Rock:`, error.message);
+            console.error(`Error sending playlists to Rock via writePlaylistConfig.js:`, error.message);
+            console.error(error.stack);
           }
         } else {
           console.log(`${GREEN}No new playlists for ${RESET}: ${BLUE}${channel.name}${RESET}`);

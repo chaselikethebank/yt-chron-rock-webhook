@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-async function addPlaylistsToRock(playlists) {
+async function addPlaylistToRock(playlists) {
     try {
         // Log playlists to console
         console.log('Playlists to be sent:', playlists);
@@ -13,13 +13,14 @@ async function addPlaylistsToRock(playlists) {
 
         // Make POST request to Rock RMS
         const response = await axios.post(webhookUrl, { playlists });
-        console.log('Response from Rock RMS:', response.data);
+        // console.log('Response from Rock RMS:', response.data);
 
     } catch (error) {
-        console.error('Error sending playlists to Rock:', error.message);
-        throw error; // Ensure errors are thrown so they can be caught where the function is called
+        console.error('Error sending playlists to Rock from addPlaylistToRock.js:', error.message);
+        console.error(error.stack);
+        throw error; 
     }
 }
 
-module.exports = addPlaylistsToRock;
+module.exports = { addPlaylistToRock} ;
 

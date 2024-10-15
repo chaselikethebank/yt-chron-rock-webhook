@@ -2,10 +2,10 @@ const cron = require('node-cron');
 const fetchAndUpdatePlaylistNames = require('./utils/writePlaylistConfig.js');
 const fetchYouTubeData = require('./fetch-refactor');  
 
-// Schedule the cron job to run at 2:30 PM from Monday to Friday
+// Schedule the cron job to run at 2:30 PM from Monday to Friday 0 14 * * 1-5
 //  
-// */20 * * * * *
-cron.schedule('30 14 * * 1,2,3,4,5', async () => {
+// */20 * * * * * 
+cron.schedule('* * * * *', async () => {
   console.log('Running YouTube data fetch job at 2:30 PM...');
   
   try {
@@ -24,7 +24,7 @@ cron.schedule('30 9 * * 1,2,3,4,5', async () => {
     await fetchAndUpdatePlaylistNames();
     await fetchYouTubeData();
   } catch (error) {
-    console.error('Error running scheduled tasks:', error);
+    console.error('Error running scheduled tasks:', error.message, error.stack);
   }
 });
 
