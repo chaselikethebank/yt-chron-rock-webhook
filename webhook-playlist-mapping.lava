@@ -1,0 +1,131 @@
+{%- assign playlist = Workflow | Attribute:'PlaylistId' -%}
+{%- if playlist == 'PLgE8B1SdCTDshXW3ET6UHQQzav65px_Qx' -%}ab05ec3a-4a10-445b-95cd-5be7f0d922d8{%break%}
+{%- elseif playlist == 'PLgE8B1SdCTDvBQalk1CLJQ6tLjSxsXwfw' -%}9fc8d09f-d7f8-4418-b589-c5866b418a59{%break%}
+{%- elseif playlist == 'PLgE8B1SdCTDtykVWGL75lJHPhfnY5CqEG' -%}ecf45821-7f68-4825-a739-a3d146180274{%break%}
+{%- elseif playlist == 'PLgE8B1SdCTDvc8Ogp6Lced5yCf7x9-JJB' -%}5d7b641e-0778-4421-b105-6aa926f41b97{%break%} 
+{%- elseif playlist == 'PLgE8B1SdCTDtUPoWwZRe_8WLedXxQJ2a3' -%}ecf45821-7f68-4825-a739-a3d146180274{%break%}
+{%- elseif playlist == 'PLgE8B1SdCTDviTSiUSYSpWFD77jxrpPQB' -%}ecf45821-7f68-4825-a739-a3d146180274{%break%}
+{%- elseif playlist == 'PLgE8B1SdCTDuA84Tqcmi7HENKoB2RMZyD' -%}ecf45821-7f68-4825-a739-a3d146180274{%break%}
+{%- elseif playlist == 'PLgE8B1SdCTDuA84Tqcmi7HENKoB2RMZyD' -%}pastor playlist{%break%}
+{%- elseif playlist == 'PLgE8B1SdCTDta9rx4ntTQHwp1gTOmOg93' -%}ecf45821-7f68-4825-a739-a3d146180274{%break%}
+{%- elseif playlist == 'PLgE8B1SdCTDt-SYjEtkpPQrJ5BcIDiYKJ' -%}ecf45821-7f68-4825-a739-a3d146180274{%break%}
+{%- elseif playlist == 'PLgE8B1SdCTDucC1Uy_E-wm6d30Bk1MnDc' -%}ecf45821-7f68-4825-a739-a3d146180274{%break%}
+{%- elseif playlist == 'PLgE8B1SdCTDvuAO1ruI40M31KD1sPeZDu' -%}{%break%}
+{%- elseif playlist == 'PLgE8B1SdCTDvuAO1ruI40M31KD1sPeZDu' -%}churchwide{%break%}
+{%- elseif playlist == 'PLgE8B1SdCTDvvRTS0s3S7aYBlSq_30ZJe' -%}other playlist{%break%}
+{%- elseif playlist == 'PLgE8B1SdCTDvfPEeMFnfeHE79l2lnm2_9' -%}churchwide{%break%}
+{%- elseif playlist == 'PLgE8B1SdCTDvO9jALsgGbQCpW4rNRvtEo' -%}storm warnings{%break%}
+{%- elseif playlist == 'PLgE8B1SdCTDvfBNvREEBNWTmsPpBStnyA' -%}ecf45821-7f68-4825-a739-a3d146180274{%break%}
+{%- elseif playlist == 'PLgE8B1SdCTDuj01Ae3Kls6iVdtSFLBZjX' -%}ecf45821-7f68-4825-a739-a3d146180274{%break%}
+{%- elseif playlist == 'PLgE8B1SdCTDsogb-ZNO9F1HWbb7z6bVS6' -%}pastor playlist{%break%}
+{%- elseif playlist == 'PLgE8B1SdCTDvg8GfZOte-xeZlkRu1Oi36' -%}ecf45821-7f68-4825-a739-a3d146180274{%break%}
+{%- elseif playlist == 'PLgE8B1SdCTDtB3FKlWiqfiI8jepGEgKod' -%}ecf45821-7f68-4825-a739-a3d146180274{%break%}
+{%- elseif playlist == 'PLgE8B1SdCTDtMzIhBT41g_nZZLnUW-rmK' -%}ecf45821-7f68-4825-a739-a3d146180274{%break%}
+{%- elseif playlist == 'PLgE8B1SdCTDvEW09MhBvrPptA1m1sThTU' -%}ecf45821-7f68-4825-a739-a3d146180274{%break%}
+{%- elseif playlist == 'PLgE8B1SdCTDul4hAyPE_DNsg1gzaCzWFk' -%}churchwide{%break%}
+{%- elseif playlist == 'PLgE8B1SdCTDuuJNkv1pLUmMYrsveRx7cr' -%}ecf45821-7f68-4825-a739-a3d146180274{%break%}
+{%- elseif playlist == 'PLgE8B1SdCTDtC7i3kBaTvRe4kOoWPPNdv' -%}pastor playlist{%break%}
+{%- elseif playlist == 'PLgE8B1SdCTDvBQalk1CLJQ6tLjSxsXwfw' -%}9fc8d09f-d7f8-4418-b589-c5866b418a59{%break%}
+{%- elseif playlist == 'PLgE8B1SdCTDv7JIBwAWCAT4K3QqPehNMD' -%}ecf45821-7f68-4825-a739-a3d146180274{%break%}
+{%- elseif playlist == 'PLgE8B1SdCTDseF65GrAvy-qKpU4VxYE3_' -%}churchwide{%break%}
+{%- elseif playlist == 'PLgE8B1SdCTDtUg_e543KcCswYy-dqQAOK' -%}churchwide{%break%}
+{%- elseif playlist == 'PLgE8B1SdCTDttHf5VGyISCnYxHUyGVPZH' -%}ecf45821-7f68-4825-a739-a3d146180274{%break%}
+{%- elseif playlist == 'PLgE8B1SdCTDvMxcN4wUcittRjqF8Ey1Ey' -%}pastor playlist{%break%}
+{%- elseif playlist == 'PLgE8B1SdCTDtGXshlxfaU-Mp_O6VJa7Lf' -%}ecf45821-7f68-4825-a739-a3d146180274{%break%}
+{%- elseif playlist == 'PLgE8B1SdCTDuZUwVymzLEoDrRJK68uTeA' -%}pastor playlist{%break%}
+{%- elseif playlist == 'PLgE8B1SdCTDtrd7vMjHTDK5dzWysgZ4ma' -%}ecf45821-7f68-4825-a739-a3d146180274{%break%}
+{%- elseif playlist == 'PLgE8B1SdCTDsM3dinrjBF61JRRZoxj8Fu' -%}pastor playlist{%break%}
+{%- elseif playlist == 'PLgE8B1SdCTDvbMuC6g61B4QBm7gEb54s9' -%}ecf45821-7f68-4825-a739-a3d146180274{%break%}
+{%- elseif playlist == 'PLgE8B1SdCTDuTanwilM3pOVvcGDN9uyLY' -%}pastor playlist{%break%}
+{%- elseif playlist == 'PLgE8B1SdCTDuogM32p8Ez4IFQZGh-te7T' -%}ecf45821-7f68-4825-a739-a3d146180274{%break%}
+{%- elseif playlist == 'PLgE8B1SdCTDv5RxvQPNh7sqYwCp62UPB3' -%}ecf45821-7f68-4825-a739-a3d146180274{%break%}
+{%- elseif playlist == 'PLgE8B1SdCTDsJfGqdyVe92cBYbxb_7uwX' -%}other{%break%}
+{%- elseif playlist == 'PLgE8B1SdCTDt4uRfKJEg-RApbZl0lxinI' -%}ecf45821-7f68-4825-a739-a3d146180274{%break%}
+{%- elseif playlist == 'PLgE8B1SdCTDvBLzw-ApUX1CCNqUruYnyI' -%}churchwide{%break%}
+{%- elseif playlist == 'PLgE8B1SdCTDuLAIT6frWAZDMb6karVSR2' -%}ecf45821-7f68-4825-a739-a3d146180274{%break%}
+{%- elseif playlist == 'PLgE8B1SdCTDtjYMoOdyCZFPvS-4RDm5j9' -%}other{%break%}
+{%- elseif playlist == 'PLgE8B1SdCTDss76snqSDBwnZzVHwsqDiW' -%}ecf45821-7f68-4825-a739-a3d146180274{%break%}
+{%- elseif playlist == 'PLgE8B1SdCTDvn2XsSSabrnS0GKE6HqOVq' -%}stories{%break%}
+{%- elseif playlist == 'PLgE8B1SdCTDuphXnWhhi4sq6du_EaW8Jb' -%}ecf45821-7f68-4825-a739-a3d146180274{%break%}
+{%- elseif playlist == 'PLgE8B1SdCTDtXtRLv8CB0M5HFEKauIFIj' -%}ecf45821-7f68-4825-a739-a3d146180274{%break%}
+{%- elseif playlist == 'PLgE8B1SdCTDvrPJMpIFlE-EQaxLoZ1uxf' -%}pastor{%break%}
+{%- elseif playlist == 'PLgE8B1SdCTDtrMUcf_IhS0oIUiMSqC0IC' -%}ecf45821-7f68-4825-a739-a3d146180274{%break%}
+{%- elseif playlist == 'PLgE8B1SdCTDu_XS6pYb8uAuwjnGe2CKLB' -%}ecf45821-7f68-4825-a739-a3d146180274{%break%}
+{%- elseif playlist == 'PLgE8B1SdCTDudRxzMRBLjiNs6ntYyPnXF' -%}ecf45821-7f68-4825-a739-a3d146180274{%break%}
+{%- elseif playlist == 'PLJhvjAmHgkAo4zawswakhlbrc9noqZ2LX' -%}5d7b641e-0778-4421-b105-6aa926f41b97{%break%}
+{%- elseif playlist == 'PLJhvjAmHgkAoo3H2juhEr2wVBs2PrUwh1' -%}5d7b641e-0778-4421-b105-6aa926f41b97{%break%}
+{%- elseif playlist == 'PLJhvjAmHgkApqCgu-LJYtXcrAo4klIKdQ' -%}5d7b641e-0778-4421-b105-6aa926f41b97{%break%}
+{%- elseif playlist == 'PLJhvjAmHgkAr_hjJBb240cjgWcK7BqfAr' -%}5d7b641e-0778-4421-b105-6aa926f41b97{%break%}
+{%- elseif playlist == 'PLJhvjAmHgkArkNorJDgZR-9H8hGZ2oaf6' -%}5d7b641e-0778-4421-b105-6aa926f41b97{%break%}
+{%- elseif playlist == 'PLJhvjAmHgkAps_8dqg3cBqGSgFyrzcYku' -%}churchwide{%break%}
+{%- elseif playlist == 'PLJhvjAmHgkApBsvfUvVgsZLUTcD7Nahy' -%}5d7b641e-0778-4421-b105-6aa926f41b97{%break%}
+{%- elseif playlist == 'PLJhvjAmHgkAq09a1LvoHHAvJED4Q3PdFF' -%}5d7b641e-0778-4421-b105-6aa926f41b97{%break%}
+{%- elseif playlist == 'PLJhvjAmHgkArWvANwUCJNdtYSQn-sHFwB' -%}5d7b641e-0778-4421-b105-6aa926f41b97{%break%}
+{%- elseif playlist == 'PLJhvjAmHgkAoHZ0nCFmD-S9vZ0NcgtO2t' -%}5d7b641e-0778-4421-b105-6aa926f41b97{%break%}
+{%- elseif playlist == 'PLJhvjAmHgkAoUgG-LVryITAb8faMxwbhT' -%}5d7b641e-0778-4421-b105-6aa926f41b97{%break%}
+{%- elseif playlist == 'PLJhvjAmHgkApiXUa80E_pnWoUfor9a86g' -%}5d7b641e-0778-4421-b105-6aa926f41b97{%break%}
+{%- elseif playlist == 'PLJhvjAmHgkArkBDs24wMyh1RRwupnVNfg' -%}5d7b641e-0778-4421-b105-6aa926f41b97{%break%}
+{%- elseif playlist == 'PLJhvjAmHgkAq4X2Wu46SwgbboJfFUvEsb' -%}5d7b641e-0778-4421-b105-6aa926f41b97{%break%}
+{%- elseif playlist == 'PLJhvjAmHgkAoPhuqIL6LuJVvubAYrNxf9' -%}5d7b641e-0778-4421-b105-6aa926f41b97{%break%}
+{%- elseif playlist == 'PLJhvjAmHgkAqHstGdDy-emnkhzM-ACje3' -%}pastor{%break%}
+{%- elseif playlist == 'PLJhvjAmHgkAobRcAWfYgFuyA97PK61US_' -%}other{%break%}
+{%- elseif playlist == 'PLJhvjAmHgkApeGKTkh3ImUjQyZ-KT94Rt' -%}pastor{%break%}
+{%- elseif playlist == 'PLJhvjAmHgkAqvrbonEJdG3W3GaynDQ-Vn' -%}5d7b641e-0778-4421-b105-6aa926f41b97{%break%}
+{%- elseif playlist == 'PLJhvjAmHgkArn8Aw_9VmVtz7nFdxiGKMW' -%}5d7b641e-0778-4421-b105-6aa926f41b97{%break%}
+{%- elseif playlist == 'PLJhvjAmHgkAqUxm3e9SCH2lRhid0UCNQV' -%}5d7b641e-0778-4421-b105-6aa926f41b97{%break%}
+{%- elseif playlist == 'PLJhvjAmHgkAoCTMqJeB__02tUGyTYPobD' -%}5d7b641e-0778-4421-b105-6aa926f41b97{%break%}
+{%- elseif playlist == 'PLJhvjAmHgkAoPahMGktAPQa90KgW7O7LY' -%}5d7b641e-0778-4421-b105-6aa926f41b97{%break%}
+{%- elseif playlist == 'PLJhvjAmHgkArk1fLHRaWvtBp6l_xrB2Bw' -%}other{%break%}
+{%- elseif playlist == 'PLJhvjAmHgkApCKy0jC3twWK59XqZXyLbk' -%}5d7b641e-0778-4421-b105-6aa926f41b97{%break%}
+{%- elseif playlist == 'PLJhvjAmHgkAr8MgFYljdy2byKlYhcedK8' -%}5d7b641e-0778-4421-b105-6aa926f41b97{%break%}
+{%- elseif playlist == 'PLJhvjAmHgkAr8u3vpukFz1yGM_-1Gjl0M' -%}5d7b641e-0778-4421-b105-6aa926f41b97{%break%}
+{%- elseif playlist == 'PLJhvjAmHgkAotQCZEKhZY5SX6cCSVNBlX' -%}5d7b641e-0778-4421-b105-6aa926f41b97{%break%}
+{%- elseif playlist == 'PLJhvjAmHgkApgAxxBiLz7vwQTrlQTZ_n2' -%}covid{%break%}
+{%- elseif playlist == 'PLJhvjAmHgkAq-sNskiO477prXdgF3ihzl' -%}other{%break%}
+{%- elseif playlist == 'PLJhvjAmHgkAqn4ZIA1299NFBnpe9Ppl7p' -%}churchwide{%break%}
+{%- elseif playlist == 'PLJhvjAmHgkArg_gkG1uU1zFwgciwPE-1r' -%}churchwide{%break%}
+{%- elseif playlist == 'PLJhvjAmHgkArCSvW_vJJCmx4OEuS2QEzC' -%}covid{%break%}
+{%- elseif playlist == 'PLJhvjAmHgkAoWGg0_xdSoKdISmH1DU_VN' -%}5d7b641e-0778-4421-b105-6aa926f41b97{%break%}
+{%- elseif playlist == 'PLJhvjAmHgkAp9CBh8FGMwySkOZHKgPqyQ' -%}5d7b641e-0778-4421-b105-6aa926f41b97{%break%}
+{%- elseif playlist == 'PLJhvjAmHgkArEQqNk6IKHrv4TVX8JLn-o' -%}covid{%break%}
+{%- elseif playlist == 'PLJhvjAmHgkAqC_ekj_pTL1cXLfTCLUpX4' -%}5d7b641e-0778-4421-b105-6aa926f41b97{%break%}
+{%- elseif playlist == 'PLMRzv2jOxhfQ5W1JmJyBXwmaSakVHdA3s' -%}9fc8d09f-d7f8-4418-b589-c5866b418a59{%break%}
+{%- elseif playlist == 'PLMRzv2jOxhfQoMVLXihAR-KuDlB3lEPLG' -%}9fc8d09f-d7f8-4418-b589-c5866b418a59{%break%}
+{%- elseif playlist == 'PLMRzv2jOxhfRQWE1VQAiSyrDnh5kp2NSd' -%}9fc8d09f-d7f8-4418-b589-c5866b418a59{%break%}
+{%- elseif playlist == 'PLMRzv2jOxhfSm1UTlml07aZhL5mG4NWsB' -%}9fc8d09f-d7f8-4418-b589-c5866b418a59{%break%}
+{%- elseif playlist == 'PLMRzv2jOxhfQrzEZ_zuyDCyyQgIduy8rv' -%}9fc8d09f-d7f8-4418-b589-c5866b418a59{%break%}
+{%- elseif playlist == 'PLMRzv2jOxhfTKRls4XRbMAO2aEotsU_XM' -%}9fc8d09f-d7f8-4418-b589-c5866b418a59{%break%}
+{%- elseif playlist == 'PLMRzv2jOxhfQaxObo5wOKYpnZLsAdXXBN' -%}9fc8d09f-d7f8-4418-b589-c5866b418a59{%break%}
+{%- elseif playlist == 'PLMRzv2jOxhfSfYu4BiOuXtApQbskit8OH' -%}9fc8d09f-d7f8-4418-b589-c5866b418a59{%break%}
+{%- elseif playlist == 'PLMRzv2jOxhfRGSk5OBhgXl9i_UOQIIZNI' -%}paster{%break%}
+{%- elseif playlist == 'PLMRzv2jOxhfR6wxhf4OQ2c4Mr0ZNOa2X-' -%}9fc8d09f-d7f8-4418-b589-c5866b418a59{%break%}
+{%- elseif playlist == 'PLMRzv2jOxhfRdwMretJIhg6T-4JNtqfT-' -%}9fc8d09f-d7f8-4418-b589-c5866b418a59{%break%}
+{%- elseif playlist == 'PLMRzv2jOxhfSk7M3O4pRV0NI9npbOtHRR' -%}9fc8d09f-d7f8-4418-b589-c5866b418a59{%break%}
+{%- elseif playlist == 'PLMRzv2jOxhfRSLPgd85x18LJPg7W2-jSl' -%}9fc8d09f-d7f8-4418-b589-c5866b418a59{%break%}
+{%- elseif playlist == 'PLMRzv2jOxhfQIiLTC-4rzkseWVmWIZ1tU' -%}9fc8d09f-d7f8-4418-b589-c5866b418a59{%break%}
+{%- elseif playlist == 'PLMRzv2jOxhfQYaXDXlSnOYQRAHkGBes4X' -%}9fc8d09f-d7f8-4418-b589-c5866b418a59{%break%}
+{%- elseif playlist == 'PLMRzv2jOxhfSH9NdtFnuaxgscn0xNhj_S' -%}9fc8d09f-d7f8-4418-b589-c5866b418a59{%break%}
+{%- elseif playlist == 'PLMRzv2jOxhfSlPBBzPbvA6T5iuR6L9ELJ' -%}9fc8d09f-d7f8-4418-b589-c5866b418a59{%break%}
+{%- elseif playlist == 'PLMRzv2jOxhfTJwclMOECA6SA-3nXvMNi_' -%}9fc8d09f-d7f8-4418-b589-c5866b418a59{%break%}
+{%- elseif playlist == 'PLMRzv2jOxhfSdcwoX7taCULrmyEVJvEQv' -%}9fc8d09f-d7f8-4418-b589-c5866b418a59{%break%}
+{%- elseif playlist == 'PLMRzv2jOxhfQLrsrFfrxYWJ3cnENg67G6' -%}9fc8d09f-d7f8-4418-b589-c5866b418a59{%break%}
+{%- elseif playlist == 'PLgE8B1SdCTDsnNB7VG97Gm65blFZIoh3M' -%}9fc8d09f-d7f8-4418-b589-c5866b418a59{%break%}
+{%- elseif playlist == 'PLgE8B1SdCTDta5eT9TYbsQcZlM7PWlc73' -%}pastor{%break%}
+{%- elseif playlist == 'PLMRzv2jOxhfTYUk8Vo5C8Oc9rgR3Nas5x' -%}pastor{%break%}
+{%- elseif playlist == 'PLMRzv2jOxhfQ6t0s-9RQk1ZK0MTAFtvcl' -%}old music{%break%}
+{%- elseif playlist == 'PLMRzv2jOxhfQP-1MmbuvtLYdGbH4JrW_J' -%}latest sermons{%break%}
+{%- elseif playlist == 'PLMRzv2jOxhfTWaGy928aiTV9u0MUy4tK-' -%}pastor{%break%}
+{%- elseif playlist == 'PLMRzv2jOxhfRjMMNKV3sAgPSL0f_fvpFx' -%}guest{%break%}
+{%- elseif playlist == 'PLMRzv2jOxhfSHLACRM1aRJpTZDLMh_2eN' -%}pastor{%break%}
+
+
+
+
+
+{% endif %}
+{%- assign cname = Workflow | Attribute:'ChannelTitle' -%}
+{%- if cname contains 'Woodforest' -%}9fc8d09f-d7f8-4418-b589-c5866b418a59{%break%}
+{%- elseif cname contains 'Montgomery' -%}eb8005a9-1a74-4c1f-b2b9-e6dfd368951f{%break%}
+{%- endif -%}
+{% comment %}https://github.com/chaselikethebank/yt-chron-rock-webhook/blob/main/playlistConfig.js{% endcomment %}
+{% comment %}Content Filter/Messages Filter = https://people.thewoodlandsmethodist.org/admin/general/defined-types/90{% endcomment %}

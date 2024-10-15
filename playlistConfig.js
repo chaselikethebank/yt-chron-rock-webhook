@@ -115,5 +115,4 @@ module.exports = {
   "Behind the Scenes": "PLMRzv2jOxhfSdcwoX7taCULrmyEVJvEQv",
   "Mid-Week Message": "PLMRzv2jOxhfQLrsrFfrxYWJ3cnENg67G6",
   "The Mind of Christ": "PLgE8B1SdCTDsnNB7VG97Gm65blFZIoh3M",
-  "Our Exodus": "PLMRzv2jOxhfQ9v2KA7VmpMw8m5u8C1LUe"
 };
