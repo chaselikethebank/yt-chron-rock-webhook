@@ -5,7 +5,7 @@ const fetchYouTubeData = require('./fetch-refactor');
 // Schedule the cron job to run at 2:30 PM from Monday to Friday 0 14 * * 1-5
 //  
 // */20 * * * * * 
-cron.schedule('* * * * *', async () => {
+cron.schedule('0 14 * * 1-5', async () => {
   console.log('Running YouTube data fetch job at 2:30 PM...');
   
   try {
