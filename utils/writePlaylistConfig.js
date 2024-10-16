@@ -57,7 +57,7 @@ async function fetchAndUpdatePlaylistNames() {
             // Write updated playlist config to file
             try {
               fs.writeFileSync(playlistConfigPath, `module.exports = ${JSON.stringify(playlistConfig, null, 2)};`);
-              console.log('Updated playlistConfig file with new playlists.');
+              console.log('Updated playlistConfig file with new playlists.', newPlaylists);
             } catch (error) {
               console.error(`Error writing playlistConfig file:`, error.message);
             }
