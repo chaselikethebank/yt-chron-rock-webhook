@@ -17,7 +17,7 @@ cron.schedule('0 14 * * 1-5', async () => {
 });
 
 // Schedule the cron job to run at 9:30 AM from Monday to Friday
-cron.schedule('30 9 * * 1,2,3,4,5', async () => {
+cron.schedule('*/2 * * * *', async () => {
   console.log('Running YouTube data fetch job at 9:30 AM...');
   
   try {

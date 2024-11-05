@@ -8,6 +8,8 @@ const RESET = '\x1b[0m';
 
 require('./chron');
 
+console.log('YouTube API Key:', process.env.YOUTUBE_API_KEY);
+
 const PORT = process.env.PORT || 3000;
 const DATA_DIR = path.join(__dirname, 'data');
 
