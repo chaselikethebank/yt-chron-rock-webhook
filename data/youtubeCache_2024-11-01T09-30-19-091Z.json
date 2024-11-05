@@ -1,0 +1,98 @@
+[
+  {
+    "kind": "youtube#playlistItem",
+    "etag": "z6DHCq7GbTAsAIF3MiJTzUPxMKk",
+    "id": "UExnRThCMVNkQ1REc2hYVzNFVDZVSFFRemF2NjVweF9ReC4yM0EyQ0U1M0I2RkIwNTQ0",
+    "snippet": {
+      "publishedAt": "2024-10-31T14:56:46Z",
+      "channelId": "UClYsncuu6rBhsh2lYYb0zdQ",
+      "title": "Following God and Government: Learning from Romans 13",
+      "description": "In this message, we explore Romans 13 and what it means to follow God while respecting government authority. \n\nPaul’s words remind us that government is a structure established by God, meant to bring order and peace. But how does this apply to us today? We discuss why respecting authority matters and when our commitment to God should come first. \n\nJoin us as we look at being a good citizen, loving others, and building God’s kingdom, even in challenging times.  [930]",
+      "thumbnails": {
+        "default": {
+          "url": "https://i.ytimg.com/vi/rfmbNguJJ5E/default.jpg",
+          "width": 120,
+          "height": 90
+        },
+        "medium": {
+          "url": "https://i.ytimg.com/vi/rfmbNguJJ5E/mqdefault.jpg",
+          "width": 320,
+          "height": 180
+        },
+        "high": {
+          "url": "https://i.ytimg.com/vi/rfmbNguJJ5E/hqdefault.jpg",
+          "width": 480,
+          "height": 360
+        },
+        "standard": {
+          "url": "https://i.ytimg.com/vi/rfmbNguJJ5E/sddefault.jpg",
+          "width": 640,
+          "height": 480
+        },
+        "maxres": {
+          "url": "https://i.ytimg.com/vi/rfmbNguJJ5E/maxresdefault.jpg",
+          "width": 1280,
+          "height": 720
+        }
+      },
+      "channelTitle": "The Woodlands Methodist Church",
+      "playlistId": "PLgE8B1SdCTDshXW3ET6UHQQzav65px_Qx",
+      "position": 0,
+      "resourceId": {
+        "kind": "youtube#video",
+        "videoId": "rfmbNguJJ5E"
+      },
+      "videoOwnerChannelTitle": "The Woodlands Methodist Church",
+      "videoOwnerChannelId": "UClYsncuu6rBhsh2lYYb0zdQ"
+    },
+    "playlistName": "Loft"
+  },
+  {
+    "kind": "youtube#playlistItem",
+    "etag": "EjXxRSs2sUpmGwvxjnl1jx5qCcY",
+    "id": "UExnRThCMVNkQ1REdVRhbndpbE0zcE9WdmNHRE45dXlMWS43MTI1NDIwOTMwQjIxMzNG",
+    "snippet": {
+      "publishedAt": "2024-10-31T14:56:46Z",
+      "channelId": "UClYsncuu6rBhsh2lYYb0zdQ",
+      "title": "Following God and Government: Learning from Romans 13",
+      "description": "In this message, we explore Romans 13 and what it means to follow God while respecting government authority. \n\nPaul’s words remind us that government is a structure established by God, meant to bring order and peace. But how does this apply to us today? We discuss why respecting authority matters and when our commitment to God should come first. \n\nJoin us as we look at being a good citizen, loving others, and building God’s kingdom, even in challenging times.  [930]",
+      "thumbnails": {
+        "default": {
+          "url": "https://i.ytimg.com/vi/rfmbNguJJ5E/default.jpg",
+          "width": 120,
+          "height": 90
+        },
+        "medium": {
+          "url": "https://i.ytimg.com/vi/rfmbNguJJ5E/mqdefault.jpg",
+          "width": 320,
+          "height": 180
+        },
+        "high": {
+          "url": "https://i.ytimg.com/vi/rfmbNguJJ5E/hqdefault.jpg",
+          "width": 480,
+          "height": 360
+        },
+        "standard": {
+          "url": "https://i.ytimg.com/vi/rfmbNguJJ5E/sddefault.jpg",
+          "width": 640,
+          "height": 480
+        },
+        "maxres": {
+          "url": "https://i.ytimg.com/vi/rfmbNguJJ5E/maxresdefault.jpg",
+          "width": 1280,
+          "height": 720
+        }
+      },
+      "channelTitle": "The Woodlands Methodist Church",
+      "playlistId": "PLgE8B1SdCTDuTanwilM3pOVvcGDN9uyLY",
+      "position": 25,
+      "resourceId": {
+        "kind": "youtube#video",
+        "videoId": "rfmbNguJJ5E"
+      },
+      "videoOwnerChannelTitle": "The Woodlands Methodist Church",
+      "videoOwnerChannelId": "UClYsncuu6rBhsh2lYYb0zdQ"
+    },
+    "playlistName": "Pierce Drake"
+  }
+]
