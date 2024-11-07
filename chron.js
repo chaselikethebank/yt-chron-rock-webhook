@@ -17,8 +17,9 @@ cron.schedule('0 14 * * 1-5', async () => {
 });
 
 // Schedule the cron job to run at 9:30 AM from Monday to Friday
-cron.schedule('*/2 * * * *', async () => {
-  console.log('Running YouTube data fetch job at 9:30 AM...');
+// every 15 min '0,15,30,45 * * * *'
+cron.schedule('*/15 * * * *', async () => {
+  console.log('Running YouTube data fetch job ...');
   
   try {
     await fetchAndUpdatePlaylistNames();

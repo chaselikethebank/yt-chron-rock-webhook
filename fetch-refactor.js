@@ -86,7 +86,7 @@ async function fetchYouTubeData() {
           };
 
           const response = await axios.post(rockRmsWebhookContentChannelUrl, videoData);
-          console.log(`${RESET}New Video Title:${BLUE} ${JSON.stringify(videoData.video.title, null, 2)}${RESET}`);
+          console.log(`${RESET}New Video returned from Rock w status: 200 ${BLUE} ${JSON.stringify(videoData.video.title, null, 2)}${RESET}`);
         } catch (error) {
           console.error(
             `Error sending video ${video.snippet.resourceId.videoId} from playlist "${video.playlistName}" to Rock RMS:`,
